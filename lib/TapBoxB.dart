@@ -30,7 +30,6 @@ class _ParentWidgetState extends State<ParentWidget> {
   }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new Container(
       child: new TapboxB(
         onChanged: _handleTapboxChanged,
@@ -50,7 +49,6 @@ class TapboxB extends StatelessWidget {
   void _handleTap() {
     onChanged(!active);
   }
-
   @override
   Widget build(BuildContext context) {
    return new GestureDetector(

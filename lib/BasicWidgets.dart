@@ -18,13 +18,13 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget container = new Container(
-      height: 56.0, // in logical pixels
+      height: 64.0, // in logical pixels
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: new BoxDecoration(color: Colors.blue[500]),
       child: new Row(
         children: <Widget>[
           new IconButton(
-            icon: Icon(Icons.menu), 
+            icon: Icon(Icons.menu),
             tooltip: 'NavigationMenu',
             onPressed: null
           ),
@@ -53,11 +53,22 @@ class MyScaffold extends StatelessWidget {
               style: Theme.of(context).primaryTextTheme.title,
             ),
           ),
-          new Expanded(
+          new Container(
+            color: Colors.black45,
             child: new Center(
-              child: new Text('Hello, flutter'),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  new Image(
+                    image: new AssetImage("images/RecordingBkg.png"),
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.fitHeight, // 缩放图片的方法
+                  ),
+                ],
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
