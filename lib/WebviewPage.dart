@@ -69,6 +69,9 @@ class _WebViewPageState extends State<WebViewPage> {
               isloading = false;
             });
             break;
+          default:
+            // 人为的冲突制造
+            break;
         }
       }
     });
