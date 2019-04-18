@@ -70,7 +70,6 @@ class _WebViewPageState extends State<WebViewPage> {
             });
             break;
           default:
-            // 默认的case
             break;
         }
       }
